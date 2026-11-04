@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>yUserLab — Cross-market user research: Brazil and beyond</title>
+<meta name="description" content="User research in Brazil for global teams: the right participants, research in Portuguese, findings in English. Plus new-market research for Brazilian companies.">
+<link rel="canonical" href="https://yuserlab.co/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="yUserLab — Understand people. Make better decisions. Across markets.">
+<meta property="og:description" content="Participants across Brazil within days, research in Portuguese, findings in English, incentives handled with one invoice. Plus research into new markets for Brazilian companies.">
+<meta property="og:url" content="https://yuserlab.co/">
+<meta property="og:image" content="https://yuserlab.co/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="yUserLab: Understand people. Make better decisions. Across markets. Portrait of Grace Coelho.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://yuserlab.co/#international">
+<link rel="alternate" hreflang="pt-BR" href="https://yuserlab.co/#empresas">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"yUserLab","url":"https://yuserlab.co/","description":"Cross-market user research connecting companies with local research expertise and research participants in Brazil.","email":"grace@yuserlab.com","founder":{"@type":"Person","name":"Grace Coelho","honorificSuffix":"PhD","sameAs":"https://www.linkedin.com/in/greicoelho/"}}
+</script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%227%22 fill=%22%230D4F5C%22/%3E%3Ctext x=%2216%22 y=%2223%22 font-family=%22Arial,sans-serif%22 font-weight=%22700%22 font-size=%2219%22 text-anchor=%22middle%22 fill=%22%23F3C343%22%3Ey%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --ink:#172024;
+  --ink-soft:#46555B;
+  --paper:#FBFCFA;
+  --mist:#E8EFED;
+  --line:#CBD6D3;
+  --atlantic:#0D4F5C;      /* international companies */
+  --atlantic-tint:#DCEBEC;
+  --ipe-roxo:#5A3E85;      /* Brazilian companies */
+  --ipe-roxo-tint:#ECE6F4;
+  --ipe-amarelo:#F3C343;   /* participants */
+  --ipe-amarelo-tint:#FCF1CF;
+  --error:#A3271F;
+  --ok:#1F6B45;
+  --display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --step--1:.875rem; --step-0:1.0625rem; --step-1:1.25rem; --step-2:1.6rem;
+  --step-3:clamp(1.9rem,1.3rem + 2.4vw,2.75rem);
+  --step-4:clamp(2.3rem,1.3rem + 3vw,3.75rem);
+  --wrap:72rem; --gutter:clamp(1.25rem,4vw,2.5rem);
+  --r-sm:6px; --r-md:14px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--step-0)/1.6 var(--body);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1em;max-width:64ch}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 var(--gutter)}
+.visually-hidden{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:1rem;top:-3rem;background:var(--ink);color:#fff;padding:.5rem 1rem;z-index:100;border-radius:var(--r-sm)}
+.skip:focus{top:1rem}
+
+/* ---------- Top bar: persistent return to the three paths ---------- */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(251,252,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+.topbar.scrolled{border-bottom-color:var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:1rem;height:3.75rem}
+.brand{font-family:var(--display);font-weight:700;font-size:1.3rem;letter-spacing:-.03em;text-decoration:none;margin-right:auto}
+.brand span{color:var(--atlantic)}
+.paths{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+.paths a{display:inline-flex;align-items:center;gap:.45rem;text-decoration:none;font-size:var(--step--1);font-weight:500;padding:.4rem .7rem;border-radius:999px;color:var(--ink-soft)}
+.paths a:hover,.paths a[aria-current="true"]{background:var(--mist);color:var(--ink)}
+.dot{width:.6rem;height:.6rem;border-radius:50%;flex:none}
+.dot.intl{background:var(--atlantic)} .dot.br{background:var(--ipe-roxo)} .dot.part{background:var(--ipe-amarelo);box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.paths .long{display:none}
+@media (min-width:52rem){.paths .long{display:inline}.paths .short{display:none}}
+@media (max-width:30rem){.topbar .wrap{gap:.5rem}.paths{gap:0}.paths a{padding:.35rem .3rem;font-size:.76rem;gap:.25rem;letter-spacing:-.01em}.dot{width:.45rem;height:.45rem}.brand{font-size:1.05rem}}
+
+/* ---------- Hero ---------- */
+.hero{padding:clamp(2rem,5vw,3.75rem) 0 1rem}
+.hero .wrap{display:grid;gap:2rem;align-items:center}
+@media (min-width:60rem){.hero .wrap{grid-template-columns:auto minmax(14rem,1fr);gap:3rem}.hero h1 span{white-space:nowrap}}
+.hero .arc{display:none;width:100%;height:auto}
+@media (min-width:60rem){.hero .arc{display:block}}
+@media (prefers-reduced-motion:no-preference){
+  .arc path{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 1.8s .25s cubic-bezier(.6,.1,.2,1) forwards}
+  .arc .end{opacity:0;animation:pop .4s 1.9s forwards}
+}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes pop{to{opacity:1}}
+.arc text{font:500 19px var(--body);fill:var(--ink-soft)}
+.hero h1{font-size:var(--step-4)}
+.hero h1 span{display:block}
+.hero h1 .l2{padding-left:.9em}
+.hero h1 .l3{padding-left:1.8em;color:var(--atlantic)}
+.hero .lede{font-size:var(--step-1);line-height:1.5;color:var(--ink-soft);max-width:46ch;margin:1.25rem 0 0}
+@media (max-width:30rem){.hero h1 .l2{padding-left:.5em}.hero h1 .l3{padding-left:1em}}
+
+/* ---------- Audience chooser ---------- */
+.chooser{padding:1.5rem 0 4rem}
+.chooser h2{font-size:var(--step-2);margin-bottom:1.25rem}
+.cards{display:grid;gap:1rem;grid-template-columns:1fr}
+@media (min-width:56rem){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:1.4rem 1.4rem 1.5rem;position:relative}
+.card::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:6px;border-radius:var(--r-md) var(--r-md) 0 0}
+.card.intl::before{background:var(--atlantic)} .card.br::before{background:var(--ipe-roxo)} .card.part::before{background:var(--ipe-amarelo)}
+.card h3{font-size:var(--step-1);margin:.35rem 0 .6rem}
+.card .who{font-size:var(--step--1);color:var(--ink-soft);margin:0}
+.card p.desc{font-size:.98rem;color:var(--ink);margin-bottom:1.25rem}
+.card .btn{margin-top:auto;align-self:flex-start}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:600 1rem/1.2 var(--body);padding:.85rem 1.25rem;border-radius:var(--r-sm);border:2px solid transparent;cursor:pointer;text-decoration:none;min-height:48px}
+.btn-intl{background:var(--atlantic);color:#fff}
+.btn-intl:hover{background:#0A3E48}
+.btn-br{background:var(--ipe-roxo);color:#fff}
+.btn-br:hover{background:#47306A}
+.btn-part{background:var(--ipe-amarelo);color:var(--ink)}
+.btn-part:hover{background:#E8B42C}
+.btn-ghost{background:transparent;border-color:currentColor}
+.btn[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.chev{transition:transform .2s;width:14px;height:14px}
+
+/* ---------- Journey sections ---------- */
+.journey{padding:clamp(3.5rem,8vw,6rem) 0;border-top:1px solid var(--line)}
+.journey .grid{display:grid;gap:2.5rem}
+@media (min-width:60rem){.journey .grid{grid-template-columns:7fr 5fr;gap:4rem;align-items:start}}
+.journey .who{display:flex;align-items:center;gap:.5rem;font-size:var(--step--1);font-weight:600;color:var(--ink-soft);margin-bottom:1rem}
+.journey h2{font-size:var(--step-3);max-width:22ch;margin-bottom:1.5rem}
+.positioning{font-family:var(--display);font-weight:400;font-size:clamp(1.3rem,1.05rem + 1vw,1.7rem);line-height:1.35;letter-spacing:-.01em;max-width:34ch;margin-bottom:1.5rem}
+.journey .body p{color:var(--ink-soft)}
+.benefits{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.benefits li{padding:1rem 0 1rem 2rem;border-bottom:1px solid var(--line);position:relative}
+.benefits li::before{content:"";position:absolute;left:0;top:1.45rem;width:1rem;height:2px}
+.intl .benefits li::before{background:var(--atlantic)} .br .benefits li::before{background:var(--ipe-roxo)} .part .benefits li::before{background:#C99A12}
+.inpractice{color:var(--ink)!important;border-left:3px solid var(--atlantic);padding-left:1rem}
+.benefits strong{font-weight:600}
+.agencies{margin:1.5rem 0 0;font-size:.98rem;color:var(--ink-soft);background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:1rem 1.2rem}
+.agencies strong{color:var(--ink)}
+.cta-row{margin-top:2rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.cta-note{font-size:var(--step--1);color:var(--ink-soft);margin:0;max-width:34ch}
+.journey.br{background:var(--ipe-roxo-tint)}
+.journey.part{background:var(--ipe-amarelo-tint)}
+.journey.part h2{max-width:20ch}
+
+.honest{background:#fff;border-radius:var(--r-md);padding:1.25rem 1.4rem;border:1px solid #E6D9A6}
+.honest h3{font-size:1.1rem;margin-bottom:.6rem}
+.honest ul{margin:0;padding-left:1.1rem}
+.honest li{margin:.35rem 0}
+
+/* ---------- Forms ---------- */
+.form-panel{margin-top:2rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:clamp(1.25rem,3vw,2rem)}
+.form-panel[hidden]{display:none}
+.form-panel h3{font-size:var(--step-1);margin-bottom:.35rem}
+.form-panel .intro{font-size:.95rem;color:var(--ink-soft)}
+.fields{display:grid;gap:1.15rem;grid-template-columns:1fr}
+@media (min-width:40rem){.fields{grid-template-columns:1fr 1fr}.fields .full{grid-column:1/-1}}
+.field label,.field legend{display:block;font-weight:600;font-size:.95rem;margin-bottom:.35rem;padding:0}
+.field .opt{font-weight:400;color:var(--ink-soft)}
+.field .hint{display:block;font-size:var(--step--1);color:var(--ink-soft);margin:-.15rem 0 .45rem}
+.field input[type=text],.field input[type=email],.field input[type=tel],.field select,.field textarea{width:100%;font:inherit;font-size:1rem;color:var(--ink);background:var(--paper);border:1.5px solid #9DAEAA;border-radius:var(--r-sm);padding:.7rem .8rem;min-height:48px}
+.field textarea{min-height:7rem;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:3px solid var(--atlantic);outline-offset:1px;border-color:var(--atlantic)}
+.br .field input:focus,.br .field select:focus,.br .field textarea:focus{outline-color:var(--ipe-roxo);border-color:var(--ipe-roxo)}
+.part .field input:focus{outline-color:#B68A0C;border-color:#B68A0C}
+.field [aria-invalid="true"]{border-color:var(--error)!important;background:#FFF7F6}
+.err{display:block;color:var(--error);font-size:var(--step--1);font-weight:600;margin-top:.35rem}
+.err:empty{display:none}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+.choices{display:grid;gap:.4rem}
+.choice{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;padding:.55rem .7rem;border:1.5px solid var(--line);border-radius:var(--r-sm);cursor:pointer;background:var(--paper)}
+.choice:has(input:checked){border-color:currentColor;background:#fff}
+.choice input{margin:.25rem 0 0;width:1.1rem;height:1.1rem;flex:none;accent-color:var(--ink)}
+.consent{display:flex;gap:.7rem;align-items:flex-start;font-size:.95rem;font-weight:400!important}
+.consent input{width:1.25rem;height:1.25rem;margin:.15rem 0 0;flex:none;accent-color:var(--ink)}
+.privacy-small{font-size:var(--step--1);color:var(--ink-soft);margin:1.25rem 0 0}
+.privacy-small a{font-weight:600}
+.form-actions{margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+.summary{border:2px solid var(--error);border-radius:var(--r-sm);padding:.8rem 1rem;margin-bottom:1.25rem;background:#FFF7F6}
+.summary[hidden]{display:none}
+.summary h4{margin:0 0 .3rem;font-size:1rem;color:var(--error)}
+.summary ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.status{border-radius:var(--r-md);padding:1.25rem 1.4rem}
+.status[hidden]{display:none}
+.status h3{font-size:var(--step-1);margin-bottom:.5rem}
+.status.success{background:#EAF5EE;border:1.5px solid var(--ok)}
+.status.pending{background:#FFF8E5;border:1.5px dashed #B68A0C}
+.status.failure{background:#FFF7F6;border:1.5px solid var(--error)}
+.status p:last-child{margin-bottom:0}
+.status blockquote{margin:.75rem 0 0;padding:.75rem 1rem;border-left:3px solid var(--ok);background:#fff;font-size:.95rem}
+
+/* ---------- Approach / trust ---------- */
+.approach{padding:clamp(3.5rem,8vw,6rem) 0;border-top:1px solid var(--line)}
+.approach h2{font-size:var(--step-3);max-width:20ch;margin-bottom:1.5rem}
+.approach .grid{display:grid;gap:2.5rem}
+@media (min-width:60rem){.approach .grid{grid-template-columns:5fr 7fr;gap:4rem}}
+.approach .text p{font-size:var(--step-1);line-height:1.55;color:var(--ink-soft)}
+.process{display:grid;gap:1.5rem}
+@media (min-width:44rem){.process{grid-template-columns:1fr 1fr}}
+.process h3{font-size:1.15rem;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.process ol{list-style:none;counter-reset:s;margin:0;padding:0}
+.process li{counter-increment:s;position:relative;padding:0 0 1.1rem 2.6rem;font-size:.98rem}
+.process li::before{content:counter(s);position:absolute;left:0;top:-.05rem;width:1.8rem;height:1.8rem;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font:600 .85rem/1 var(--display)}
+.process li::after{content:"";position:absolute;left:.88rem;top:1.9rem;bottom:.2rem;width:1.5px;background:var(--line)}
+.process li:last-child::after{display:none}
+.process strong{display:block;font-weight:600}
+.process span{color:var(--ink-soft)}
+
+
+/* ---------- Founder ---------- */
+.founder{padding:clamp(3.5rem,8vw,6rem) 0;border-top:1px solid var(--line);background:var(--mist)}
+.founder .grid{display:grid;gap:2rem;align-items:start}
+@media (min-width:48rem){.founder .grid{grid-template-columns:minmax(14rem,22rem) 1fr;gap:4rem}}
+.founder picture img{width:100%;height:auto;aspect-ratio:2/3;object-fit:cover;border-radius:var(--r-md)}
+@media (max-width:47.99rem){.founder picture img{max-width:18rem;aspect-ratio:4/5;object-position:center 20%}}
+.founder h2{font-size:var(--step-3);margin-bottom:.4rem}
+.founder .role{font-size:var(--step-1);color:var(--ink-soft);margin-bottom:1.5rem}
+.founder p{max-width:52ch}
+.founder .role{margin-bottom:.4rem}
+.founder .tags{list-style:none;padding:0;margin:0 0 1.5rem;display:flex;flex-wrap:wrap;gap:.4rem;font-size:var(--step--1);font-weight:500;color:var(--atlantic)}
+.founder .tags li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.2rem .7rem;white-space:nowrap}
+.founder-quote{margin:1.75rem 0 1.5rem;padding:0 0 0 1.1rem;border-left:3px solid var(--ipe-amarelo);font-family:var(--display);font-size:clamp(1.2rem,1rem + .8vw,1.5rem);line-height:1.35;letter-spacing:-.01em;max-width:34ch}
+.founder .confid{font-size:var(--step--1);color:var(--ink-soft)}
+.pt-version{margin:1.25rem 0 1.5rem;border-top:1px solid var(--line);padding-top:1rem}
+.pt-version summary{cursor:pointer;font-weight:600;color:var(--atlantic);min-height:44px;display:flex;align-items:center}
+.pt-version[open] summary{margin-bottom:.75rem}
+@media (min-width:48rem){.founder picture{position:sticky;top:5rem}}
+.linkedin{display:inline-flex;align-items:center;gap:.6rem;margin-top:.5rem}
+.linkedin svg{width:20px;height:20px}
+
+/* ---------- Contact box ---------- */
+.contact-box{margin-top:1.75rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:1.25rem 1.4rem;max-width:40rem}
+.contact-box p{margin:0 0 1rem;color:var(--ink)}
+.contact-addr{font-weight:600;white-space:nowrap}
+.contact-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.copy-btn{color:var(--atlantic);background:transparent}
+.copy-btn:hover{background:var(--atlantic-tint)}
+.copy-status{font-size:var(--step--1);font-weight:600;color:var(--ok)}
+
+.mail-menu{position:relative}
+#mail-toggle[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.mail-options{position:absolute;left:0;top:calc(100% + .4rem);z-index:20;list-style:none;margin:0;padding:.35rem;min-width:15rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);box-shadow:0 8px 24px rgba(23,32,36,.12)}
+.mail-options[hidden]{display:none}
+.mail-options a{display:flex;align-items:center;min-height:44px;padding:.5rem .75rem;border-radius:4px;text-decoration:none;font-weight:500;color:var(--ink)}
+.mail-options a:hover,.mail-options a:focus-visible{background:var(--atlantic-tint)}
+
+/* ---------- Privacy & footer ---------- */
+.privacy{padding:2.5rem 0 1.5rem;border-top:1px solid var(--line)}
+.privacy h2{font-size:1.05rem;letter-spacing:0;margin-bottom:.75rem;color:var(--ink-soft)}
+.privacy ul{margin:0;padding-left:1.1rem;max-width:78ch}
+.privacy li{font-size:var(--step--1);line-height:1.6;color:var(--ink-soft);margin:.2rem 0}
+.privacy strong{font-weight:600;color:var(--ink-soft)}
+.privacy a{color:var(--ink-soft)}
+.todo{background:var(--ipe-amarelo-tint);padding:0 .25em;border-radius:3px;color:var(--ink)}
+footer{padding:2rem 0 3rem;font-size:var(--step--1);color:var(--ink-soft)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between}
+footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="yUserLab, back to top">y<span>User</span>Lab</a>
+    <nav aria-label="Choose your path">
+      <ul class="paths">
+        <li><a href="#international" data-track="nav_click" data-audience="international"><i class="dot intl" aria-hidden="true"></i><span class="long">International companies</span><span class="short">International</span></a></li>
+        <li><a href="#empresas" lang="pt-BR" data-track="nav_click" data-audience="br_companies"><i class="dot br" aria-hidden="true"></i><span class="long">Empresas brasileiras</span><span class="short">Empresas</span></a></li>
+        <li><a href="#participar" lang="pt-BR" data-track="nav_click" data-audience="participants"><i class="dot part" aria-hidden="true"></i><span class="long">Participar de pesquisas</span><span class="short">Participar</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title"><span>Understand people.</span> <span class="l2">Make better decisions.</span> <span class="l3">Across markets.</span></h1>
+        <p class="lede">We connect companies with local research expertise and people whose experiences help teams understand customers, products and markets beyond their own context.</p>
+      </div>
+      <svg class="arc" viewBox="0 0 560 300" aria-hidden="true" focusable="false">
+      <path d="M50 240 C 140 20, 420 20, 510 240" fill="none" stroke="var(--atlantic)" stroke-width="1.5"/>
+      <circle cx="50" cy="240" r="7" fill="var(--atlantic)"/>
+      <circle class="end" cx="510" cy="240" r="7" fill="var(--ipe-amarelo)" stroke="var(--ink)" stroke-width="1"/>
+      <text x="20" y="272" text-anchor="start">your team</text>
+      <text class="end" x="540" y="272" text-anchor="end">people, in context</text>
+    </svg>
+    </div>
+  </section>
+
+  <!-- CHOOSER -->
+  <section class="chooser" aria-labelledby="choose-title">
+    <div class="wrap">
+      <h2 id="choose-title">What brings you here?</h2>
+      <div class="cards">
+        <article class="card intl">
+          <p class="who">International companies</p>
+          <h3>Understand your users in Brazil</h3>
+          <p class="desc">We recruit the right participants, run the research in Portuguese and deliver findings in English, with one invoice that covers participant incentives.</p>
+          <a class="btn btn-intl" href="#international" data-track="choose_path" data-audience="international" data-location="card">See how it works for your team</a>
+        </article>
+        <article class="card br" lang="pt-BR">
+          <p class="who">Empresas brasileiras</p>
+          <h3>Entenda pessoas em mercados internacionais</h3>
+          <p class="desc">Pesquisa com pessoas locais para descobrir necessidades, critérios de escolha e barreiras antes de expandir.</p>
+          <a class="btn btn-br" href="#empresas" data-track="choose_path" data-audience="br_companies" data-location="card">Ver como funciona</a>
+        </article>
+        <article class="card part" lang="pt-BR">
+          <p class="who">Pessoas no Brasil</p>
+          <h3>Participe de pesquisas</h3>
+          <p class="desc">Compartilhe sua experiência e ajude a melhorar produtos e serviços que você usa. Você decide de quais estudos participa.</p>
+          <a class="btn btn-part" href="#participar" data-open="form-part" data-track="choose_path" data-audience="participants" data-location="card">Quero participar de pesquisas</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTION 1: INTERNATIONAL COMPANIES -->
+  <section class="journey intl" id="international" aria-labelledby="intl-title" data-audience="international">
+    <div class="wrap">
+      <div class="grid">
+        <div class="body">
+          <p class="who"><i class="dot intl" aria-hidden="true"></i>For international product, design and research teams</p>
+          <h2 id="intl-title">Learn how your product is experienced in Brazil</h2>
+          <p class="positioning">We help global product, design and research teams understand how their product is experienced in Brazil: we recruit and verify the right participants, run the research in Portuguese, and bring back findings in English with the cultural context behind them.</p>
+          <p class="inpractice"><strong>In practice:</strong> interviews, usability tests and service walkthroughs with people in Brazil who use, or could use, your product or service.</p>
+          <p>No time or local resources to recruit participants in Brazil? That's usually where studies stall. We take that part off your plate, and stay with you through the research itself.</p>
+          <p>Local language matters. So does understanding the context behind what people say and do.</p>
+          <p>From participant recruitment and screening to Portuguese-language research and English-language findings, yUserLab helps your team learn from Brazilian users without losing the cultural and behavioural nuances that inform better decisions.</p>
+        </div>
+        <div>
+          <ul class="benefits" aria-label="What we do">
+            <li><strong>Recruit and screen participants</strong> against your study criteria, across Brazil's regions and profiles, with first participants within days.</li>
+            <li><strong>Conduct research in Portuguese</strong>, with language and cultural support that goes beyond literal translation: expressions, regional differences and social norms.</li>
+            <li><strong>Understand local behaviours</strong>, expectations and decision-making contexts.</li>
+            <li><strong>Receive findings in English</strong>, with cultural context and actionable insights.</li>
+            <li><strong>Go further with service design</strong>: map journeys and touchpoints and shape how your service should work for people in Brazil.</li>
+            <li><strong>Leave incentives to us</strong>: we pay participants locally and send you a single invoice.</li>
+          </ul>
+          <p class="agencies"><strong>Consultancies and agencies:</strong> running a study for a client with users in Brazil? We can handle recruitment, Portuguese-language fieldwork and incentives as part of your project.</p>
+          <div class="cta-row">
+            <button class="btn btn-intl" type="button" aria-expanded="false" aria-controls="form-intl" data-toggle="form-intl" data-track="form_cta_click" data-audience="international" data-location="section">
+              Tell us what you need to learn
+              <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <p class="cta-note">Opens a short form, about 2 minutes. No commitment: we review it and follow up to talk it through.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-panel" id="form-intl" hidden>
+        <form novalidate data-form="international" aria-labelledby="fi-title">
+          <h3 id="fi-title">Tell us what you need to learn</h3>
+          <p class="intro">Share as much as you know right now. Rough ideas are fine; we'll ask follow-up questions.</p>
+          <div class="summary" role="alert" tabindex="-1" hidden><h4>Please check the following</h4><ul></ul></div>
+          <div class="fields">
+            <div class="field"><label for="fi-name">Name</label><input id="fi-name" name="name" type="text" autocomplete="name" required data-msg="Enter your name."><span class="err" id="fi-name-err"></span></div>
+            <div class="field"><label for="fi-email">Work email</label><input id="fi-email" name="email" type="email" autocomplete="email" required data-msg="Enter an email address like name@company.com."><span class="err" id="fi-email-err"></span></div>
+            <div class="field"><label for="fi-company">Company</label><input id="fi-company" name="company" type="text" autocomplete="organization" required data-msg="Enter your company name."><span class="err" id="fi-company-err"></span></div>
+            <div class="field"><label for="fi-role">Role</label><span class="hint" id="fi-role-hint">At an agency or consultancy? Mention it here.</span><input id="fi-role" name="role" type="text" autocomplete="organization-title" required aria-describedby="fi-role-hint" data-msg="Enter your role, for example Product Designer."><span class="err" id="fi-role-err"></span></div>
+            <div class="field full"><label for="fi-goal">What do you want to understand about Brazilian users?</label><span class="hint" id="fi-goal-hint">For example: why sign-ups drop after onboarding, or how people compare you with local alternatives.</span><textarea id="fi-goal" name="goal" required aria-describedby="fi-goal-hint" data-msg="Tell us briefly what you want to learn."></textarea><span class="err" id="fi-goal-err"></span></div>
+            <fieldset class="field full" data-group="support" data-msg="Choose the type of support you're looking for, or 'Not sure yet'.">
+              <legend>What type of support are you looking for?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="support" value="recruitment_screening" required> Recruitment and screening</label>
+                <label class="choice"><input type="radio" name="support" value="pt_research"> Portuguese-language research</label>
+                <label class="choice"><input type="radio" name="support" value="synthesis_insights"> Research synthesis and insights</label>
+                <label class="choice"><input type="radio" name="support" value="service_design"> Service design</label>
+                <label class="choice"><input type="radio" name="support" value="end_to_end"> End-to-end research support</label>
+                <label class="choice"><input type="radio" name="support" value="not_sure"> Not sure yet</label>
+              </div>
+              <span class="err" id="fi-support-err"></span>
+            </fieldset>
+            <div class="field full"><label for="fi-timeline">Expected timeline <span class="opt">(optional)</span></label><input id="fi-timeline" name="timeline" type="text" placeholder="e.g. findings needed by March"></div>
+          </div>
+          <p class="privacy-small">We use these details only to reply to your enquiry and discuss your project. See the <a href="#privacy">privacy notice</a>.</p>
+          <div class="form-actions"><button class="btn btn-intl" type="submit">Discuss your research needs</button></div>
+        </form>
+        <div class="status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTION 2: BRAZILIAN COMPANIES -->
+  <section class="journey br" id="empresas" lang="pt-BR" aria-labelledby="br-title" data-audience="br_companies">
+    <div class="wrap">
+      <div class="grid">
+        <div class="body">
+          <p class="who"><i class="dot br" aria-hidden="true"></i>Para empresas brasileiras</p>
+          <h2 id="br-title">Sua empresa quer crescer em outros mercados? Comece entendendo as pessoas.</h2>
+          <p>Expandir para outro país exige mais do que traduzir um produto ou adaptar uma comunicação. É preciso compreender como as pessoas vivem, escolhem, compram e utilizam soluções naquele contexto.</p>
+          <p>A yUserLab ajuda empresas brasileiras a investigar novos mercados por meio de pesquisa com pessoas locais, identificando necessidades, expectativas, comportamentos, critérios de escolha e possíveis barreiras à adoção.</p>
+        </div>
+        <div>
+          <ul class="benefits" aria-label="O que a pesquisa ajuda a fazer">
+            <li>Compreender consumidores em mercados internacionais.</li>
+            <li>Investigar necessidades, hábitos e critérios de decisão.</li>
+            <li>Identificar diferenças culturais e barreiras de adoção.</li>
+            <li>Transformar descobertas em insights acionáveis para decisões de produto, serviço e expansão.</li>
+          </ul>
+          <div class="cta-row">
+            <button class="btn btn-br" type="button" aria-expanded="false" aria-controls="form-br" data-toggle="form-br" data-track="form_cta_click" data-audience="br_companies" data-location="section">
+              Quero entender um novo mercado
+              <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <p class="cta-note">Abre um formulário curto. Sem compromisso: analisamos sua consulta e entramos em contato para conversar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-panel" id="form-br" hidden>
+        <form novalidate data-form="br_companies" aria-labelledby="fb-title">
+          <h3 id="fb-title">Conte qual mercado você quer entender</h3>
+          <p class="intro">Não precisa ter tudo definido. Uma ideia inicial já ajuda a começarmos a conversa.</p>
+          <div class="summary" role="alert" tabindex="-1" hidden><h4>Confira os seguintes campos</h4><ul></ul></div>
+          <div class="fields">
+            <div class="field"><label for="fb-name">Nome</label><input id="fb-name" name="name" type="text" autocomplete="name" required data-msg="Informe seu nome."><span class="err" id="fb-name-err"></span></div>
+            <div class="field"><label for="fb-email">E-mail profissional</label><input id="fb-email" name="email" type="email" autocomplete="email" required data-msg="Informe um e-mail válido, como nome@empresa.com.br."><span class="err" id="fb-email-err"></span></div>
+            <div class="field full"><label for="fb-company">Empresa</label><input id="fb-company" name="company" type="text" autocomplete="organization" required data-msg="Informe o nome da empresa."><span class="err" id="fb-company-err"></span></div>
+            <div class="field full"><label for="fb-market">Qual mercado ou país deseja compreender?</label><input id="fb-market" name="market" type="text" required data-msg="Informe o mercado ou país que deseja compreender."><span class="err" id="fb-market-err"></span></div>
+            <div class="field full"><label for="fb-goal">O que sua empresa precisa descobrir?</label><span class="hint" id="fb-goal-hint">Por exemplo: como as pessoas escolhem esse tipo de serviço, ou o que poderia impedir a adoção.</span><textarea id="fb-goal" name="goal" required aria-describedby="fb-goal-hint" data-msg="Conte brevemente o que sua empresa precisa descobrir."></textarea><span class="err" id="fb-goal-err"></span></div>
+            <fieldset class="field full" data-group="stage" data-msg="Escolha em que momento está o projeto.">
+              <legend>Em que momento está o projeto?</legend>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="stage" value="exploring" required> Explorando possibilidades</label>
+                <label class="choice"><input type="radio" name="stage" value="planning"> Planejando a expansão</label>
+                <label class="choice"><input type="radio" name="stage" value="operating"> Já atuando no mercado</label>
+                <label class="choice"><input type="radio" name="stage" value="other"> Outro</label>
+              </div>
+              <span class="err" id="fb-stage-err"></span>
+            </fieldset>
+          </div>
+          <p class="privacy-small">Usamos esses dados apenas para responder à sua consulta e conversar sobre o projeto. Veja o <a href="#privacy">aviso de privacidade</a>.</p>
+          <div class="form-actions"><button class="btn btn-br" type="submit">Enviar minha consulta</button></div>
+        </form>
+        <div class="status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPTION 3: PARTICIPANTS -->
+  <section class="journey part" id="participar" lang="pt-BR" aria-labelledby="part-title" data-audience="participants">
+    <div class="wrap">
+      <div class="grid">
+        <div class="body">
+          <p class="who"><i class="dot part" aria-hidden="true"></i>Para pessoas que moram no Brasil</p>
+          <h2 id="part-title">Sua experiência pode ajudar a melhorar os produtos que você usa.</h2>
+          <p>Empresas precisam ouvir pessoas reais para compreender melhor suas experiências, necessidades e expectativas.</p>
+          <p>A yUserLab conecta pessoas no Brasil a oportunidades de participação em estudos de pesquisa. Ao compartilhar sua experiência, você pode contribuir para o desenvolvimento de produtos e serviços melhores.</p>
+          <div class="cta-row">
+            <button class="btn btn-part" type="button" aria-expanded="false" aria-controls="form-part" data-toggle="form-part" data-track="form_cta_click" data-audience="participants" data-location="section">
+              Quero participar de pesquisas
+              <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            </button>
+            <p class="cta-note">Só pedimos seu e-mail. Leva menos de um minuto.</p>
+          </div>
+        </div>
+        <aside class="honest" aria-labelledby="honest-title">
+          <h3 id="honest-title">Antes de se inscrever, saiba como funciona</h3>
+          <ul>
+            <li>Entrar na lista não garante um convite para um estudo.</li>
+            <li>Os convites dependem dos critérios e das necessidades de cada pesquisa.</li>
+            <li>Antes de qualquer estudo, você recebe as informações e decide se quer participar.</li>
+            <li>Você pode sair da lista ou pedir a exclusão dos seus dados quando quiser.</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="form-panel" id="form-part" hidden>
+        <form novalidate data-form="participants" aria-labelledby="fp-title">
+          <h3 id="fp-title">Entrar na lista de interesse</h3>
+          <p class="intro">Quando surgir um estudo compatível com seu perfil, enviaremos as informações para você decidir.</p>
+          <div class="summary" role="alert" tabindex="-1" hidden><h4>Confira os seguintes campos</h4><ul></ul></div>
+          <div class="fields">
+            <div class="field full"><label for="fp-email">E-mail</label><input id="fp-email" name="email" type="email" autocomplete="email" required data-msg="Informe um e-mail válido, como nome@exemplo.com."><span class="err" id="fp-email-err"></span></div>
+            <div class="field full"><label for="fp-whats">WhatsApp <span class="opt">(opcional)</span></label><span class="hint" id="fp-whats-hint">Se preferir, você também pode informar seu WhatsApp para receber convites e comunicações sobre oportunidades de pesquisa. Inclua o DDD, por exemplo (11) 91234-5678.</span><input id="fp-whats" name="whatsapp" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="fp-whats-hint" data-phone data-msg="Confira o número: inclua o DDD, com 10 ou 11 dígitos, ou deixe o campo em branco."><span class="err" id="fp-whats-err"></span></div>
+            <div class="field full">
+              <label class="consent" for="fp-consent"><input id="fp-consent" name="consent" type="checkbox" required data-msg="Para entrar na lista, marque a caixa de consentimento."> <span>Aceito receber convites e comunicações da yUserLab sobre oportunidades de pesquisa pelos contatos informados. Posso retirar meu consentimento e pedir a exclusão da lista a qualquer momento.</span></label>
+              <span class="err" id="fp-consent-err"></span>
+            </div>
+          </div>
+          <p class="privacy-small">Seus dados são usados apenas para convites de pesquisa e nunca são vendidos. Saiba mais no <a href="#privacy">aviso de privacidade</a>.</p>
+          <div class="form-actions"><button class="btn btn-part" type="submit">Entrar na lista de interesse</button></div>
+        </form>
+        <div class="status" role="status" aria-live="polite" tabindex="-1" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH / TRUST -->
+  <section class="approach" id="approach" aria-labelledby="approach-title">
+    <div class="wrap">
+      <div class="grid">
+        <div class="text">
+          <h2 id="approach-title">Better research starts with understanding people in context.</h2>
+          <p>People do not experience products and services in isolation. Their decisions are shaped by needs, expectations, habits, culture and everyday circumstances.</p>
+          <p>yUserLab aims to bring these local perspectives into research so companies can move beyond assumptions and make better-informed decisions.</p>
+        </div>
+        <div class="process">
+          <div>
+            <h3><i class="dot intl" aria-hidden="true"></i>For companies: what happens next</h3>
+            <ol>
+              <li><strong>You share what you want to learn</strong><span>A short enquiry: your question, context and timing.</span></li>
+              <li><strong>We review it and follow up</strong><span>We ask clarifying questions and talk through the options.</span></li>
+              <li><strong>We agree the scope together</strong><span>Participants, method and deliverables are agreed before any research begins.</span></li>
+            </ol>
+          </div>
+          <div lang="pt-BR">
+            <h3><i class="dot part" aria-hidden="true"></i>Para participantes: como funciona</h3>
+            <ol>
+              <li><strong>Você entra na lista</strong><span>Só com seu e-mail e, se quiser, seu WhatsApp.</span></li>
+              <li><strong>Surge um estudo compatível</strong><span>Enviamos as informações do estudo antes de qualquer coisa.</span></li>
+              <li><strong>Você decide</strong><span>Participar é sempre uma escolha sua, estudo a estudo.</span></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOUNDER -->
+  <section class="founder" id="about" aria-labelledby="founder-title">
+    <div class="wrap">
+      <div class="grid">
+        <picture>
+          <source srcset="assets/grace-coelho.webp" type="image/webp">
+          <img src="assets/grace-coelho.jpg" width="719" height="1080" loading="lazy" alt="Portrait of Grace Coelho, smiling, against a blue background">
+        </picture>
+        <div>
+          <h2 id="founder-title">Grace Coelho, PhD</h2>
+          <p class="role">Founder of yUserLab and Coelho Strategy</p>
+          <ul class="tags"><li>Senior UX Researcher</li><li>Cross-market user research</li><li>Financial Services, Health, EdTech &amp; AI</li><li>EN/PT</li></ul>
+          <p>Grace has spent 13+ years working across startups, UX and digital products. Her doctoral research deepened her practice in generative and evaluative research methods, strengthening her ability to understand people’s needs, behaviours and decision-making with rigour.</p>
+          <p>yUserLab helps global enterprises understand Brazilian users beyond the language. The service combines culturally informed research design, participant screening against study criteria, and Portuguese-language research with local context and behavioural nuance.</p>
+          <p>Grace’s focus goes beyond gathering responses: she connects what people say and do to what it means for the business, translating locally grounded findings into clear, actionable recommendations that help teams make better product decisions.</p>
+          <blockquote class="founder-quote">Because research creates value not just when you understand people, but when that understanding changes what you do next.</blockquote>
+          <p class="confid">Clients’ strategic studies are kept strictly confidential, for reasons of ethics and research rigour.</p>
+          <details class="pt-version" lang="pt-BR">
+            <summary>Ler em português</summary>
+            <p class="role">Fundadora da yUserLab e da Coelho Strategy</p>
+            <p>Grace tem mais de 13 anos de experiência com startups, UX e produtos digitais. Sua pesquisa de doutorado aprofundou sua prática em métodos de pesquisa generativos e avaliativos, fortalecendo sua capacidade de compreender com rigor as necessidades, os comportamentos e as decisões das pessoas.</p>
+            <p>A yUserLab ajuda empresas globais a compreender usuários brasileiros para além do idioma. O serviço combina desenho de pesquisa culturalmente informado, triagem de participantes de acordo com os critérios do estudo e pesquisa em português com contexto local e nuances comportamentais.</p>
+            <p>O foco de Grace vai além de coletar respostas: ela conecta o que as pessoas dizem e fazem ao que isso significa para o negócio, transformando descobertas fundamentadas no contexto local em recomendações claras e acionáveis, que ajudam equipes a tomar melhores decisões de produto.</p>
+            <blockquote class="founder-quote">Porque a pesquisa gera valor não apenas quando entendemos as pessoas, mas quando esse entendimento muda o que fazemos a seguir.</blockquote>
+            <p class="confid">Os estudos estratégicos dos clientes são mantidos em estrita confidencialidade, por razões éticas e de rigor da pesquisa.</p>
+          </details>
+          <a class="btn btn-intl btn-ghost linkedin" style="color:var(--atlantic)" href="https://www.linkedin.com/in/greicoelho/" target="_blank" rel="noopener" data-track="linkedin_click" data-location="founder">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            Grace on LinkedIn
+          </a>
+          <div class="contact-box" id="contact" aria-labelledby="contact-title">
+            <h3 id="contact-title" class="visually-hidden">Contact Grace</h3>
+            <p>My team and I work Monday to Thursday, 9am to 5pm Portugal time. Email us at <strong class="contact-addr">grace@yuserlab.com</strong>, and I’ll recommend an approach and provide a rough price estimate.</p>
+            <div class="contact-actions">
+              <div class="mail-menu">
+                <button class="btn btn-intl" type="button" id="mail-toggle" aria-expanded="false" aria-controls="mail-options" data-track="contact_menu_open" data-location="contact_box">Write the email
+                  <svg class="chev" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 5l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
+                <ul class="mail-options" id="mail-options" hidden aria-label="Choose where to write the email">
+                  <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=grace%40yuserlab.com&amp;su=Research%20enquiry%20%E2%80%94%20yUserLab" target="_blank" rel="noopener" data-track="email_provider" data-provider="gmail">Gmail</a></li>
+                  <li><a href="https://outlook.live.com/mail/0/deeplink/compose?to=grace%40yuserlab.com&amp;subject=Research%20enquiry%20%E2%80%94%20yUserLab" target="_blank" rel="noopener" data-track="email_provider" data-provider="outlook_personal">Outlook.com</a></li>
+                  <li><a href="https://outlook.office.com/mail/deeplink/compose?to=grace%40yuserlab.com&amp;subject=Research%20enquiry%20%E2%80%94%20yUserLab" target="_blank" rel="noopener" data-track="email_provider" data-provider="outlook_work">Outlook (work or school)</a></li>
+                  <li><a href="https://compose.mail.yahoo.com/?to=grace%40yuserlab.com&amp;subject=Research%20enquiry%20%E2%80%94%20yUserLab" target="_blank" rel="noopener" data-track="email_provider" data-provider="yahoo">Yahoo Mail</a></li>
+                  <li><a href="mailto:grace@yuserlab.com?subject=Research%20enquiry%20%E2%80%94%20yUserLab" data-track="email_provider" data-provider="default_app">Default mail app</a></li>
+                </ul>
+              </div>
+              <button class="btn btn-ghost copy-btn" type="button" data-copy="grace@yuserlab.com" data-track="email_copy" data-location="contact_box">Copy address</button>
+              <span class="copy-status" role="status" aria-live="polite"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY NOTICE -->
+  <section class="privacy" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap">
+      <h2 id="privacy-title">Privacy notice</h2>
+      <ul>
+        <li><strong>Who is responsible:</strong> yUserLab is the trading name of Greicy K Silva (NIF 272896535), Beco do Mirante, São Vicente, Lisboa. Email <a href="mailto:grace@yuserlab.com">grace@yuserlab.com</a>.</li>
+        <li><strong>Company enquiries:</strong> we use your name, work email, company, role and the details you share only to reply and discuss your project (legitimate interest / pre-contractual steps).</li>
+        <li><strong>Participant list:</strong> we use your email and optional WhatsApp number only to send research invitations, based on your consent.</li>
+        <li><strong>Analytics:</strong> we use Umami, a cookieless analytics tool, to count visits and clicks in aggregate. It sets no cookies and does not identify you.</li>
+        <li><strong>We never sell your personal data.</strong></li>
+        <li><strong>Retention:</strong> we only retain personal information for as long as necessary to fulfil the purposes for which it was collected, or to meet applicable legal obligations.</li>
+        <li><strong>Your rights (GDPR and LGPD):</strong> you may request access, correction or deletion of your data, subject to applicable legal requirements. You can also withdraw your consent to research invitations at any time. Email <a href="mailto:grace@yuserlab.com">grace@yuserlab.com</a>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> yUserLab. Research in English and Portuguese.</span>
+    <span><a href="#top">Back to the three paths</a> &nbsp;|&nbsp; <a href="#contact" data-track="footer_click" data-location="contact">Contact</a> &nbsp;|&nbsp; <a href="#privacy">Privacy</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/greicoelho/" target="_blank" rel="noopener" data-track="linkedin_click" data-location="footer">LinkedIn</a></span>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   CONFIGURATION — connect real form handling here.
+   Each audience posts JSON to its own endpoint (e.g. a serverless function,
+   Formspree/Basin, HubSpot/Pipedrive forms API, or Brevo/Mailchimp for the
+   participant list with double opt-in). Leave null until connected:
+   the page will then NOT pretend data was sent or stored.
+   ===================================================================== */
+const CONFIG = {
+  endpoints: {
+    international: null,   // e.g. "https://api.yuserlab.co/enquiry/international"
+    br_companies:  null,   // e.g. "https://api.yuserlab.co/enquiry/brasil"
+    participants:  null    // e.g. "https://api.yuserlab.co/participants/waitlist"
+  },
+  contactEmail: "grace@yuserlab.com",  // shown in the privacy notice
+  /* Umami Cloud analytics (cookieless). Paste the Website ID from
+     Umami → Settings → Websites → Edit → Tracking code. Leave null to disable. */
+  umamiWebsiteId: null,                // e.g. "a1b2c3d4-...."
+  umamiScript: "https://cloud.umami.is/script.js",
+  analyticsDomain: "yuserlab.co"       // only count visits on the live domain
+};
+
+/* ---------- Analytics: pushes to dataLayer (GTM/GA4-ready) and a DOM event ---------- */
+window.dataLayer = window.dataLayer || [];
+const umamiQueue = [];
+function sendToUmami(event, data){
+  if(window.umami && typeof window.umami.track==='function'){
+    try{ Object.keys(data).length ? window.umami.track(event, data) : window.umami.track(event); }catch(e){}
+  } else if(CONFIG.umamiWebsiteId){ umamiQueue.push([event,data]); }
+}
+function track(event, params){
+  const data = {};
+  Object.entries(params||{}).forEach(([k,v])=>{ if(v!==undefined && v!==null && v!=='') data[k]=String(v).slice(0,100); });
+  window.dataLayer.push(Object.assign({event}, data));
+  sendToUmami(event, data);
+  document.dispatchEvent(new CustomEvent('yul:track',{detail:Object.assign({event},data)}));
+}
+/* Load Umami only on the live domain, so tests and previews are not counted */
+(function loadAnalytics(){
+  if(!CONFIG.umamiWebsiteId) return;
+  const host = location.hostname.replace(/^www\./,'');
+  if(CONFIG.analyticsDomain && host!==CONFIG.analyticsDomain) return;
+  const sc = document.createElement('script');
+  sc.defer = true; sc.src = CONFIG.umamiScript;
+  sc.dataset.websiteId = CONFIG.umamiWebsiteId;
+  sc.dataset.domains = CONFIG.analyticsDomain;
+  sc.addEventListener('load',()=>{ const t=setInterval(()=>{ if(window.umami){ clearInterval(t); umamiQueue.splice(0).forEach(([e,d])=>sendToUmami(e,d)); } },100); setTimeout(()=>clearInterval(t),10000); });
+  document.head.appendChild(sc);
+})();
+
+/* ---------- Copy for each form's outcomes ---------- */
+const TEXT = {
+  international: {
+    success: {h:'Thank you. Your enquiry has been received.', p:'We will review what you shared and follow up by email to discuss your research needs.'},
+    failure: 'Your enquiry could not be sent. Check your connection and try again, or email grace@yuserlab.com.',
+    pending: {h:'This form is not connected yet', p:'Nothing was sent or stored. For now, please email grace@yuserlab.com. Once form handling is connected, visitors will see this confirmation:'}
+  },
+  br_companies: {
+    success: {h:'Obrigado! Sua consulta foi recebida.', p:'Vamos analisar as informações e entrar em contato por e-mail para conversar sobre o projeto.'},
+    failure: 'Não foi possível enviar sua consulta. Verifique sua conexão e tente novamente, ou escreva para grace@yuserlab.com.',
+    pending: {h:'Este formulário ainda não está conectado', p:'Nada foi enviado nem armazenado. Por enquanto, escreva para grace@yuserlab.com. Quando o envio estiver conectado, as pessoas verão esta confirmação:'}
+  },
+  participants: {
+    success: {h:'Obrigado pelo interesse!', p:'Seu contato foi recebido. Quando surgir uma oportunidade compatível com seu perfil, poderemos entrar em contato com mais informações.'},
+    failure: 'Não foi possível enviar sua inscrição. Verifique sua conexão e tente novamente.',
+    pending: {h:'Este formulário ainda não está conectado', p:'Nada foi enviado nem armazenado. Quando o envio estiver conectado, as pessoas verão esta confirmação:'}
+  }
+};
+
+/* ---------- Disclosure: open / close forms ---------- */
+function openPanel(id, focus){
+  const panel = document.getElementById(id);
+  if(!panel) return;
+  const wasHidden = panel.hidden;
+  panel.hidden = false;
+  document.querySelectorAll('[aria-controls="'+id+'"]').forEach(b=>b.setAttribute('aria-expanded','true'));
+  if(wasHidden) track('form_open',{audience: panel.querySelector('form').dataset.form});
+  if(focus){
+    const first = panel.querySelector('input,textarea,select');
+    panel.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto':'smooth', block:'start'});
+    setTimeout(()=>first && first.focus({preventScroll:true}), 350);
+  }
+}
+document.querySelectorAll('[data-toggle]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const id = btn.dataset.toggle, panel = document.getElementById(id);
+    if(panel.hidden){ openPanel(id,true); }
+    else { panel.hidden = true; btn.setAttribute('aria-expanded','false'); }
+  });
+});
+document.querySelectorAll('[data-open]').forEach(a=>{
+  a.addEventListener('click',()=>openPanel(a.dataset.open,true));
+});
+
+/* ---------- Click tracking ---------- */
+document.addEventListener('click',e=>{
+  const el = e.target.closest('[data-track]');
+  if(el) track(el.dataset.track,{audience:el.dataset.audience, location:el.dataset.location, provider:el.dataset.provider});
+});
+
+/* ---------- Validation ---------- */
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+function fieldError(form, input){
+  if(input.type==='checkbox') return input.required && !input.checked ? input.dataset.msg : '';
+  const v = input.value.trim();
+  if(input.required && !v) return input.dataset.msg;
+  if(v && input.type==='email' && !EMAIL_RE.test(v)) return input.dataset.msg;
+  if(v && input.hasAttribute('data-phone')){
+    const digits = v.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'');
+    if(digits.length<10 || digits.length>11) return input.dataset.msg;
+  }
+  return '';
+}
+function errId(input){ return input.id ? input.id+'-err' : null; }
+function setError(input, msg, errEl){
+  const el = errEl || document.getElementById(errId(input));
+  if(!el) return;
+  el.textContent = msg;
+  input.setAttribute('aria-invalid', msg ? 'true':'false');
+  const ids = (input.getAttribute('aria-describedby')||'').split(' ').filter(x=>x && x!==el.id);
+  if(msg) ids.push(el.id);
+  if(ids.length) input.setAttribute('aria-describedby', ids.join(' ')); else input.removeAttribute('aria-describedby');
+}
+function validate(form){
+  const errors = [];
+  form.querySelectorAll('input:not([type=radio]),textarea').forEach(input=>{
+    if(!input.id) return;
+    const msg = fieldError(form,input);
+    setError(input,msg);
+    if(msg) errors.push({msg, target:input});
+  });
+  form.querySelectorAll('fieldset[data-group]').forEach(fs=>{
+    const radios = fs.querySelectorAll('input[type=radio]');
+    const ok = [...radios].some(r=>r.checked);
+    const errEl = fs.querySelector('.err');
+    errEl.textContent = ok ? '' : fs.dataset.msg;
+    radios.forEach(r=>r.setAttribute('aria-invalid', ok?'false':'true'));
+    if(ok) fs.removeAttribute('aria-describedby'); else fs.setAttribute('aria-describedby', errEl.id);
+    if(!ok) errors.push({msg:fs.dataset.msg, target:radios[0]});
+  });
+  return errors;
+}
+function showSummary(form, errors){
+  const box = form.querySelector('.summary'), list = box.querySelector('ul');
+  list.innerHTML = '';
+  errors.forEach(err=>{
+    const li = document.createElement('li'), a = document.createElement('a');
+    a.href = '#'+err.target.id; a.textContent = err.msg;
+    a.addEventListener('click',ev=>{ev.preventDefault(); err.target.focus();});
+    li.appendChild(a); list.appendChild(li);
+  });
+  box.hidden = errors.length===0;
+  if(errors.length) box.focus();
+}
+/* After a first attempt, clear a field's error as soon as it becomes valid (while typing, so the layout never shifts under a click) */
+document.querySelectorAll('form[data-form]').forEach(form=>{
+  form.addEventListener('input',e=>{
+    if(!form.dataset.tried) return;
+    const t = e.target;
+    if(t.id && t.type!=='radio' && !fieldError(form,t)) setError(t,'');
+  });
+  form.addEventListener('change',e=>{
+    if(!form.dataset.tried || e.target.type!=='radio') return;
+    const fs = e.target.closest('fieldset'); fs.querySelector('.err').textContent='';
+    fs.querySelectorAll('input').forEach(r=>r.setAttribute('aria-invalid','false'));
+  });
+  form.addEventListener('submit',onSubmit);
+  form.addEventListener('focusin',()=>{ if(!form.dataset.started){ form.dataset.started='1'; track('form_start',{audience:form.dataset.form}); } });
+});
+
+/* ---------- Submit ---------- */
+function collect(form){
+  const data = {};
+  new FormData(form).forEach((v,k)=>{ data[k] = typeof v==='string' ? v.trim() : v; });
+  if(data.consent) data.consent = {given:true, text:form.querySelector('.consent span').textContent.trim(), at:new Date().toISOString()};
+  data.page_language = form.closest('[lang]') ? form.closest('[lang]').lang : 'en';
+  return data;
+}
+function renderStatus(form, kind, audience){
+  const status = form.parentElement.querySelector('.status'), t = TEXT[audience];
+  status.className = 'status '+kind;
+  if(kind==='success'){
+    status.innerHTML = '<h3></h3><p></p>';
+    status.querySelector('h3').textContent = t.success.h;
+    status.querySelector('p').textContent = t.success.p;
+  } else if(kind==='pending'){
+    status.innerHTML = '<h3></h3><p></p><blockquote><strong></strong> <span></span></blockquote>';
+    status.querySelector('h3').textContent = t.pending.h;
+    status.querySelector('p').textContent = t.pending.p;
+    status.querySelector('blockquote strong').textContent = t.success.h;
+    status.querySelector('blockquote span').textContent = t.success.p;
+  } else {
+    status.innerHTML = '<p></p>';
+    status.querySelector('p').textContent = t.failure;
+  }
+  status.hidden = false;
+  status.focus();
+}
+async function onSubmit(e){
+  e.preventDefault();
+  const form = e.target, audience = form.dataset.form;
+  form.dataset.tried = '1';
+  const errors = validate(form);
+  showSummary(form, errors);
+  if(errors.length){
+    track('form_error',{audience, fields:errors.map(e=>e.target.name).join(',')});
+    return;
+  }
+  /* Non-personal profile signals only: never names, emails, companies or free text */
+  const fd = new FormData(form);
+  track('form_complete',{audience, support:fd.get('support'), stage:fd.get('stage'),
+    whatsapp: audience==='participants' ? (fd.get('whatsapp')||'').trim() ? 'yes':'no' : undefined,
+    timeline: audience==='international' ? ((fd.get('timeline')||'').trim() ? 'given':'none') : undefined});
+
+  const endpoint = CONFIG.endpoints[audience];
+  if(!endpoint){
+    renderStatus(form,'pending',audience);
+    track('form_not_connected',{audience});
+    return;
+  }
+  const btn = form.querySelector('[type=submit]'), label = btn.textContent;
+  btn.disabled = true; btn.textContent = audience==='international' ? 'Sending…' : 'Enviando…';
+  try{
+    const res = await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(collect(form))});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    form.hidden = true;
+    renderStatus(form,'success',audience);
+    track('form_sent',{audience});
+  }catch(err){
+    renderStatus(form,'failure',audience);
+    track('form_send_failed',{audience});
+  }finally{
+    btn.disabled = false; btn.textContent = label;
+  }
+}
+
+/* ---------- Email provider menu ---------- */
+(function(){
+  const btn=document.getElementById('mail-toggle'), menu=document.getElementById('mail-options');
+  if(!btn) return;
+  const links=()=>[...menu.querySelectorAll('a')];
+  function setOpen(open, focusFirst){
+    menu.hidden=!open; btn.setAttribute('aria-expanded', String(open));
+    if(open && focusFirst) links()[0].focus();
+  }
+  btn.addEventListener('click',()=>setOpen(menu.hidden, false));
+  btn.removeAttribute('data-track');
+  btn.addEventListener('click',()=>{ if(!menu.hidden) track('contact_menu_open',{location:'contact_box'}); });
+  btn.addEventListener('keydown',e=>{ if(e.key==='ArrowDown'){ e.preventDefault(); setOpen(true,true);} });
+  menu.addEventListener('keydown',e=>{
+    const l=links(), i=l.indexOf(document.activeElement);
+    if(e.key==='ArrowDown'){e.preventDefault(); l[(i+1)%l.length].focus();}
+    if(e.key==='ArrowUp'){e.preventDefault(); l[(i-1+l.length)%l.length].focus();}
+    if(e.key==='Escape'){setOpen(false); btn.focus();}
+  });
+  menu.addEventListener('click',e=>{ if(e.target.closest('a')) setTimeout(()=>setOpen(false),0); });
+  document.addEventListener('click',e=>{ if(!menu.hidden && !e.target.closest('.mail-menu')) setOpen(false); });
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && !menu.hidden){ setOpen(false); btn.focus(); } });
+})();
+
+/* ---------- Copy email address ---------- */
+document.querySelectorAll('[data-copy]').forEach(btn=>{
+  btn.addEventListener('click',async()=>{
+    const status = btn.parentElement.querySelector('.copy-status');
+    try{
+      await navigator.clipboard.writeText(btn.dataset.copy);
+      status.textContent = 'Address copied';
+    }catch(err){
+      const addr = btn.closest('.contact-box').querySelector('.contact-addr');
+      const r = document.createRange(); r.selectNodeContents(addr);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      status.textContent = 'Address selected: press Ctrl+C or ⌘C to copy';
+    }
+    clearTimeout(btn._t); btn._t = setTimeout(()=>{status.textContent='';},4000);
+  });
+});
+
+/* ---------- Small page behaviours ---------- */
+if(CONFIG.contactEmail){
+  document.querySelectorAll('[data-contact]').forEach(el=>{
+    const a = document.createElement('a'); a.href='mailto:'+CONFIG.contactEmail; a.textContent=CONFIG.contactEmail;
+    el.replaceWith(a);
+  });
+}
+document.getElementById('year').textContent = new Date().getFullYear();
+const bar = document.querySelector('.topbar');
+addEventListener('scroll',()=>bar.classList.toggle('scrolled', scrollY>8),{passive:true});
+/* Highlight the path currently in view */
+const navLinks = [...document.querySelectorAll('.paths a')];
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(!en.isIntersecting) return;
+    navLinks.forEach(a=>a.setAttribute('aria-current', a.getAttribute('href')==='#'+en.target.id ? 'true':'false'));
+  });
+},{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('.journey').forEach(s=>io.observe(s));
+/* Section views: once per page load, when about 40% of a section is visible */
+const seen = new Set();
+const sectionIO = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting && !seen.has(en.target.id)){ seen.add(en.target.id); track('section_view',{section:en.target.id}); sectionIO.unobserve(en.target); }
+  });
+},{threshold:.4});
+['international','empresas','participar','approach','about','contact'].forEach(id=>{ const el=document.getElementById(id); if(el) sectionIO.observe(el); });
+/* Entry link: arriving directly at one journey, e.g. yuserlab.co/#international */
+if(location.hash && location.hash.length>1) track('entry_link',{target:location.hash.slice(1)});
+/* Reading the Portuguese bio */
+const ptBio = document.querySelector('.pt-version');
+if(ptBio) ptBio.addEventListener('toggle',()=>{ if(ptBio.open) track('pt_bio_open',{}); });
+/* Arriving with #participar etc. */
+if(location.hash==='#participar') openPanel('form-part',false);
+</script>
+</body>
+</html>
